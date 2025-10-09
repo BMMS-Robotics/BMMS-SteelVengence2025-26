@@ -1,0 +1,192 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="Uvrlm*kX43{eqk!O8Q1a">Frontleft</variable>
+<variable id="c%pzABoZqg{9+l!e7CY|">Frontright</variable>
+<variable id="WS]`#8i03MlbfS%jNleA">Backright</variable>
+<variable id=")8xD*Y;,Sz(sdRA8,x.R">Backleft</variable>
+</variables>
+<block type="variables_get" id="RUbKdvBraj6]RSbBiyDq" x="53" y="73">
+<field name="VAR" id=")8xD*Y;,Sz(sdRA8,x.R">Backleft</field>
+</block>
+<block type="variables_get" id="Dhb`v-]b|plM7kBY*Z^F" x="148" y="94">
+<field name="VAR" id="Uvrlm*kX43{eqk!O8Q1a">Frontleft</field>
+</block>
+<block type="variables_get" id="WU45.E})_gXj~{io|k:L" x="25" y="110">
+<field name="VAR" id="WS]`#8i03MlbfS%jNleA">Backright</field>
+</block>
+<block type="variables_get" id="cH/Ik`VOny%0R!0}QFa?" x="236" y="161">
+<field name="VAR" id="c%pzABoZqg{9+l!e7CY|">Frontright</field>
+</block>
+<block type="procedures_defnoreturn" id="WtpyD@tEu+EoY=P9iY,D" deletable="false" x="15" y="196">
+<field name="NAME">runOpMode</field>
+<comment pinned="false" h="141" w="577">This sample contains the bare minimum Blocks for any regular OpMode. The 3 blue
+Comment Blocks show where to place Initialization code (runs once, after touching the
+DS INIT button, and before touching the DS Start arrow), Run code (runs once, after
+touching Start), and Loop code (runs repeatedly while the OpMode is active, namely not
+Stopped).</comment>
+<data>{"commentPositionLeft":-20,"commentPositionTop":-169}</data>
+<statement name="STACK">
+<block type="linearOpMode_waitForStart" id=":`$wN_ci`O;o6P0~.(+g">
+<next>
+<block type="dcMotor_setProperty_Direction" id="*A5E9M]E!gn)1DM7q6rk">
+<field name="IDENTIFIER">motor0AsDcMotor</field>
+<field name="PROP">Direction</field>
+<data>{"IDENTIFIER":"motor0"}</data>
+<value name="VALUE">
+<shadow type="dcMotor_typedEnum_direction" id="bsa6lsC|Av;QIP]6`dR_">
+<field name="DIRECTION">FORWARD</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setProperty_Direction" id="u?6YMF2mt.AKC*=jlL2,">
+<field name="IDENTIFIER">motor1AsDcMotor</field>
+<field name="PROP">Direction</field>
+<data>{"IDENTIFIER":"motor1"}</data>
+<value name="VALUE">
+<shadow type="dcMotor_typedEnum_direction" id="8FIA]JjIQn}no9)Tlx,i">
+<field name="DIRECTION">REVERSE</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setProperty_Direction" id="tK}QDc5[#JGZw5XAqu+*">
+<field name="IDENTIFIER">motor2AsDcMotor</field>
+<field name="PROP">Direction</field>
+<data>{"IDENTIFIER":"motor2"}</data>
+<value name="VALUE">
+<shadow type="dcMotor_typedEnum_direction" id="46rw,]@*2v@QxtQvTs=:">
+<field name="DIRECTION">FORWARD</field>
+</shadow>
+</value>
+<next>
+<block type="dcMotor_setProperty_Direction" id="6U_%iH2.K6aBFM682u.6">
+<field name="IDENTIFIER">motor3AsDcMotor</field>
+<field name="PROP">Direction</field>
+<data>{"IDENTIFIER":"motor3"}</data>
+<value name="VALUE">
+<shadow type="dcMotor_typedEnum_direction" id="(G#[~=Rvx3m=}a(N2B]/">
+<field name="DIRECTION">REVERSE</field>
+</shadow>
+</value>
+<next>
+<block type="controls_whileUntil" id="ckkubsOdbBD[|H2oR.VM">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="linearOpMode_opModeIsActive" id="}iP11Z$]@4Cq$ez?3$.k"/>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="variables_set" id="$9!^Mn[bgb!V%L@8rn#s" x="186" y="504">
+<field name="VAR" id="WS]`#8i03MlbfS%jNleA">Backright</field>
+<value name="VALUE">
+<block type="math_arithmetic" id="##0_H)XY|7s4Zo.@p_X(">
+<field name="OP">MULTIPLY</field>
+<value name="A">
+<shadow type="math_number" id="[5u/jKj3!Sc%Js4Gi(Iv">
+<field name="NUM">0</field>
+</shadow>
+<block type="gamepad_getProperty_Number" id="3k3Elw^@p2D:rHLE%EV#">
+<field name="IDENTIFIER">gamepad1</field>
+<field name="PROP">LeftStickX</field>
+<data>{"IDENTIFIER":"gamepad1"}</data>
+</block>
+</value>
+<value name="B">
+<shadow type="math_number" id="2+qxs`gBXj$WoJ=a0Ga*">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="rBg_m|H*Jh+m%40j3!!Q">
+<field name="VAR" id=")8xD*Y;,Sz(sdRA8,x.R">Backleft</field>
+<value name="VALUE">
+<block type="math_arithmetic" id="SK!tsEbxI2F/dNN`||4+">
+<field name="OP">MULTIPLY</field>
+<value name="A">
+<shadow type="math_number" id="/N,dwML:[?_G9Yl4UOA%">
+<field name="NUM">0</field>
+</shadow>
+<block type="gamepad_getProperty_Number" id="wh={X:#kL;oS)%Z$H2w!">
+<field name="IDENTIFIER">gamepad1</field>
+<field name="PROP">LeftStickX</field>
+<data>{"IDENTIFIER":"gamepad1"}</data>
+</block>
+</value>
+<value name="B">
+<shadow type="math_number" id="DJKfv[-CWjvDPw#:R9D?">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="3au_5:;e-lQ@p[_Q^fMv">
+<field name="VAR" id="c%pzABoZqg{9+l!e7CY|">Frontright</field>
+<value name="VALUE">
+<block type="math_arithmetic" id="%49P*6I!;1VVLsvII9v4">
+<field name="OP">MULTIPLY</field>
+<value name="A">
+<shadow type="math_number">
+<field name="NUM">0</field>
+</shadow>
+<block type="gamepad_getProperty_Number" id="QI:km6p8`i,Iq_k/P-W^">
+<field name="IDENTIFIER">gamepad1</field>
+<field name="PROP">LeftStickX</field>
+<data>{"IDENTIFIER":"gamepad1"}</data>
+</block>
+</value>
+<value name="B">
+<shadow type="math_number" id="`jC2_MwT7+pFUo_C0gA;">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="U38soSqe%7*Sr3`e)A=C">
+<field name="VAR" id="Uvrlm*kX43{eqk!O8Q1a">Frontleft</field>
+<value name="VALUE">
+<block type="math_arithmetic" id="+6s9JP,m)OMOi1i25*pk">
+<field name="OP">MULTIPLY</field>
+<value name="A">
+<shadow type="math_number">
+<field name="NUM">0</field>
+</shadow>
+<block type="gamepad_getProperty_Number" id="4jdIBK6(u+m9np?]wqI_">
+<field name="IDENTIFIER">gamepad1</field>
+<field name="PROP">LeftStickX</field>
+<data>{"IDENTIFIER":"gamepad1"}</data>
+</block>
+</value>
+<value name="B">
+<shadow type="math_number" id="P/v%N1W{`-,8fnR70Rtn">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<Extra>
+<OpModeMeta flavor="TELEOP" group="" autoTransition="" />
+<Enabled value="true" />
+</Extra>
